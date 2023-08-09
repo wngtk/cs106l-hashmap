@@ -1,0 +1,25 @@
+Assignment 3: STL HashMap (short answer questions)
+Names: tk wang
+
+1. at() vs []
+The at() has bound check. And at won't create a pair if the key is not exist.
+The operator [] will create a pair with empty value: {key, {}}, if the key is not exist.
+
+Because [non_exist_key] will create value. const HashMap can not do operator[].
+
+2. Find vs. 𝓕𝓲𝓷𝓭
+std::find function uses a loop iterate all key.
+HashMap::find uses hash function obtain a bucket index. Faster than std::find.
+
+3. RAII?
+Yes! HashMap has a destructor. The destructor will clear the resource of HashMap object.
+
+4. Increments
+Iterate all node in the bucket. And iterate all bucket.
+
+1. Attachment Issues
+The std::vector's copy constructor/assignment operator is member wise copy. But _buckets_array's element is pointer.
+So the copy constructor is needed. Because the Rule of Five. We should implement SMFs.
+
+2. Move Semantics
+Yes
