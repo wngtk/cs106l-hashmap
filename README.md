@@ -5,7 +5,7 @@ CS 106L, Standard C++ Programming, Stanford University, Spring 2023.
 不知道如何实现移动构造函数和移动赋值函数的时候可以看看 cppreference，参考手册给了一个很好的示例。
 
 ## 关于右值引用
-困扰我很久的右值引用，实际上右值引用并不是延长对象的生命周期，只不过标记这个变量即将销毁，它的资源可以被转移。
+困扰我很久的右值引用，实际上右值引用并不是用来延长对象的生命周期，只不过标记这个变量即将销毁，它的资源可以被转移。
 
 - Only l-values can be referenced using &.
 - rvalues can be bound to `const &` (we promise not to change them)
